@@ -1,18 +1,14 @@
 R, C = map(int, input().split())
 grid = [list(input().split()) for _ in range(R)]
 
+
 # Please write your code here.
 ans = 0
-temp = []
-for r in range(1, R):
-    for c in range(1, C):
-        if grid[r][c] != grid[0][0]:
-            temp.append((r, c))
-
-for pr, pc in temp:
-    for r in range(pr + 1, R - 1):
-        for c in range(pc + 1, C - 1):
-            if grid[pr][pc] != grid[r][c]:
-                ans += 1
-    
+if grid[R - 1][C - 1] != grid[0][0]:
+    for i in range(R - 2):
+        for j in range(C - 2):
+            for k in range(i + 1, R - 1):
+                for l in range(j + 1, C - 1):
+                    if grid[0][0] == grid[k][l] and grid[R - 1][C - 1] == grid[i][j]:
+                        ans += 1    
 print(ans)
