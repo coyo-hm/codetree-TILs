@@ -38,4 +38,5 @@ for i in range(19):
                 r, c = i, j
 
 print(answer)
-print(r + 1, c + 1)                
+if answer != 0:
+    print(r + 1, c + 1)                
