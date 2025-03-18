@@ -8,6 +8,7 @@ answer = 0
 for i in range(n):
     for j in range(i + 1, n):
         for k in range(j + 1, n):
+            s = 0
             if x[i] == x[j] and y[i] == y[k]:
                 s = abs(y[i] - y[j]) * abs(x[i] - x[k])
             elif x[i] == x[j] and y[j] == y[k]:
