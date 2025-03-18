@@ -15,7 +15,7 @@ for i in range(n):
                 s = abs(y[i] - y[j]) * abs(x[j] - x[k])
             elif x[i] == x[k] and y[j] == y[i]:
                 s = abs(y[i] - y[k]) * abs(x[j] - x[i])
-            elif x[i] == x[k] and y[j] == y[i]:
+            elif x[i] == x[k] and y[j] == y[k]:
                 s = abs(y[i] - y[k]) * abs(x[j] - x[i])
             elif x[j] == x[k] and y[i] == y[j]:
                 s = abs(y[j] - y[k]) * abs(x[i] - x[j])
